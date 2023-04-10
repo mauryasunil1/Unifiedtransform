@@ -27,7 +27,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "80:80"
+      - "8080:80"
       - "443:443"
     volumes:
       - ./:/var/www
@@ -42,12 +42,10 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "3306:3306"
+      - "3307:3306"
     environment:
-      MYSQL_DATABASE: school
-      MYSQL_ROOT_PASSWORD: x12345678y
-      MYSQL_USER: root
-      MYSQL_PASSWORD: x12345678y
+      MYSQL_DATABASE: unifiedtransform
+      MYSQL_ROOT_PASSWORD: your_mysql_root_password
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
